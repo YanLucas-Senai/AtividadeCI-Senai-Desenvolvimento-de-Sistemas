@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        
+        <title> Raízes do Litoral </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Link para o file estilo.css, cujo é o responsável pela estilização do website -->
+        <!-- <link rel="stylesheet" href="../Estilo/CSS/styleImbassai.css"> -->
+        <link rel="stylesheet" href="{% static 'polls/CSS/styleImbassai.css' %}">
+
+        <!-- Favicon da page -->
+        <link rel="icon" type="image/png" href="{% static 'polls/Fotos/Favicon ilha da Page Raízes do Litoral.png' %}">
+
+        <!-- Link de importação da fonte Satisfy do Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap" rel="stylesheet">
+
+        <!-- Link de importação da fonte Poppins do Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <a href="{% url 'index' %}">
+            <h1> Imbassaí </h1>
+        </a>
+        <h2> Galeria de Fotos - Imbassaí  </h2>
+
+        <div class="Conteiner-Principal">
+        <div class="Conteiner-Forte">
+            <div class="card">
+            <div class="card-body">
+                <div class="carrossel-wrapper">
+                     <input type="radio" name="carrossel-controle" id="slide-1" checked>
+                    <input type="radio" name="carrossel-controle" id="slide-2">
+                    <input type="radio" name="carrossel-controle" id="slide-3">
+                <!-- 
+                    botões de navegação
+                     <div class="nav-botoes">
+                        <a href="../Fotos/Praia do Forte - Foto 01.jpg" class="btn-carrossel"> 1 </a>
+
+                        <a href="../Fotos/Praia do Forte - Foto 02.jpg" class="btn-carrossel"> 2 </a>
+
+                        <a href="../Fotos/Praia do Forte - Foto 04.jpg" class="btn-carrossel"> 3 </a>
+                     </div>
+                -->
+
+                     <!-- Conêiner das Imagens -->
+                      <div class="janela-carrossel">
+                        <div class="slides-lista">
+                           <!--
+                            <img id="img1" src="../Fotos/Imbassaí - Foto 01.jpg" alt="Imagem 1">
+                            <img img="img2" src="../Fotos/Imbassaí - Foto 02.jpg" alt="Imagem 2">
+                            <img id="img3" src="../Fotos/Imbassaí - Foto 03.jpg" alt="Imagem 3">
+                            -->
+
+                            <img id="img1" src="{% static 'polls/Fotos/Imbassaí - Foto 01.jpg' %}" alt="Imagem 1">
+                            <img img="img2" src="{% static 'polls/Fotos/Imbassaí - Foto 02.jpg' %}" alt="Imagem 2">
+                            <img id="img3" src="{% static 'polls/Fotos/Imbassaí - Foto 03.jpg' %}" alt="Imagem 3">
+
+                        </div>
+                      </div>
+
+                      <!-- Botões numéricos baseados nas Labels dos inputs -->
+                    <div class="nav-botoes">
+                        <label for="slide-1" class="btn-carrossel">1</label>
+                        <label for="slide-2" class="btn-carrossel">2</label>
+                        <label for="slide-3" class="btn-carrossel">3</label>
+                    </div>
+
+                <!-- Fechamento do Carrossel-wrapper -->
+                </div>
+
+                <h3 class="card-title"> A Encantadora Natureza de Imbassaí </h3>
+                
+                <div class="Textos">
+                    <p class="card-text">
+                            <Strong> Imbassaí </Strong>, localizada no município de Mata de São João,
+                            no litoral norte da Bahia surgiu como uma pequena
+                            comunidade ligada principalmente à pesca,
+                            à agricultura e ao extrativismo. Durante muitos anos,
+                            seus moradores viveram de forma simples,
+                            aproveitando os recursos naturais oferecidos pelo rio,
+                            pelo mar e pelas áreas de Mata Atlântica. <br>
+                        <strong> Consulte nossos pacotes. </strong>
+                    </p>
+                </div>
+
+                <br>
+
+                <div class="title-image">
+                    <h2 class="card-title">A Vila de Imbassaí</h2>
+                    <div class="loose-image"><img src="{% static 'polls/Fotos/Vila_Imbassai/Vila_01.jpeg' %}"></div>
+                </div>
+                
+                <div class="card-text">
+                <p>
+                    A Vila de Imbassaí é uma comunidade localizada no litoral norte da Bahia,
+                    conhecida por sua tranquilidade, suas belezas naturais e pela forte relação
+                    entre o rio e o mar. Durante grande parte de sua história, a população local
+                    manteve uma vida simples, baseada principalmente na
+                    <strong>pesca, agricultura e atividades extrativistas</strong>. O Rio Imbassaí,
+                    que atravessa a vila até encontrar o Oceano Atlântico, sempre teve grande
+                    importância para a paisagem e para a identidade da comunidade.
+                </p>
+
+                <br>
+
+                <div class="title-image">
+                <h2> Crescimento Turístico de Imbassaí</h2>
+                <div class="loose-image"><img src="{% static 'polls/Fotos/Vila_Imbassai/Vila_02.jpeg' %}"></div>
+                </div>
+
+                <br>
+
+                <p>
+                    Com o crescimento do turismo no litoral norte da Bahia, especialmente a partir
+                    do final do século XX, Imbassaí passou por transformações e começou a receber
+                    <strong>pousadas, restaurantes, lojas e outros estabelecimentos</strong>.
+                    Apesar desse desenvolvimento, a vila ainda preserva sua atmosfera tranquila
+                    e parte de suas características tradicionais. Atualmente, Imbassaí atrai
+                    visitantes interessados em <strong>praias, rios, trilhas, gastronomia e
+                    contato com a natureza</strong>, tornando-se um importante destino turístico
+                    da Bahia.
+                </p>
+                </div>    
+
+            </div>
+            </div>
+
+        <!-- Fechamento do Conteiner da Imbassaí  -->
+        </div>
+        
+        <!-- Fechamento do Conteiner Principal  -->
+        </div>
+
+    </body>
+</html>

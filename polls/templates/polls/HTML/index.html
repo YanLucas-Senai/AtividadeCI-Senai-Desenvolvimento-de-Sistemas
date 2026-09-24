@@ -1,0 +1,74 @@
+<!-- Permite a implementação das fotos e das estilizações-->
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        
+        <title> Raízes do Litoral </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Link para o file estilo.css, cujo é o responsável pela estilização do website -->
+        <link rel="stylesheet" href="{% static 'polls/CSS/style.css' %}">
+
+        <!-- Favicon da page -->
+        <link rel="icon" type="image/png" href="{% static 'polls/Fotos/Favicon ilha da Page Raízes do Litoral.png' %}">
+
+        <!-- Link de importação da fonte Satisfy do Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap" rel="stylesheet">
+
+        <!-- Link de importação da fonte Poppins do Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <h1> Bem-vindo ao Raízes do Litoral </h1>
+        <h2> Pontos Turísticos  </h2>
+
+        <div class="Conteiner-Principal">
+        <div class="Conteiner-Forte">
+            <div class="card" style="width: 100em;">
+            <a href="{% url 'praia_do_forte' %}" class="link-imagem"><img class="card-img-top" src="{% static 'polls/Fotos/Praia do Forte - Foto 04.jpg' %}" alt="Card image cap"></a>
+            <div class="card-body">
+                <h3 class="card-title"> Venha conhecer Praia do Forte </h3>
+                <p class="card-text">
+                    <strong> Onde o charme da vila encontra a beleza do mar. </strong> <br>
+                    Viva experiências inesquecíveis na Praia do Forte com roteiros personalizados. <br>
+                    Garanta sua próxima viagem! <br>
+                    <strong> Consulte nossos pacotes. </strong>
+
+                </p>
+            </div>
+            </div>
+
+        <!-- Fechamento do Conteiner da Praia do Forte  -->
+        </div>
+        
+        <!-- ----------------------------------------------------- -->
+        <div class="Conteiner-Imbassai">
+            <div class="card" style="width: 100em;">
+            <a href="{% url 'imbassai' %}" class="link-imagem"><img class="card-img-top" src="{% static 'polls/Fotos/Imbassaí - Foto 03.jpg' %}" alt="Card image cap"></a>
+            <div class="card-body">
+                <h3 class="card-title"> Venha conhecer Imbassaí </h3>
+                <p class="card-text"> 
+                    <strong> Onde o rio encontra o mar e o tempo desacelera. </strong> <br> 
+                    Venha viver a essência de Imbassái com a nossa agência. Roteiros exclusivos para você relaxar e se apaixonar! <br>
+                    <strong> Consulte nossos pacotes. </strong>
+                </p>
+            </div>
+            </div>
+
+        <!-- Fechamento do Conteiner do Imbassaí -->
+        </div>
+
+        <!-- Fechamento do Conteiner Principal -->
+        </div>
+
+    </body>
+</html>

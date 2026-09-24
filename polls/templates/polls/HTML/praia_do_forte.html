@@ -1,0 +1,137 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        
+        <title> Raízes do Litoral </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Link para o file estilo.css, cujo é o responsável pela estilização do website -->
+        <link rel="stylesheet" href="{% static 'polls/CSS/stylePraia.css' %}">
+
+        <!-- Favicon da page -->
+        <link rel="icon" type="image/png" href="{% static 'polls/Fotos/Favicon ilha da Page Raízes do Litoral.png' %}">
+
+        <!-- Link de importação da fonte Satisfy do Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap" rel="stylesheet">
+
+        <!-- Link de importação da fonte Poppins do Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <a href="{% url 'index' %}">
+            <h1> Praia do Forte </h1>
+        </a>
+        <h2> Galeria de Fotos - Praia do Forte  </h2>
+
+        <div class="Conteiner-Principal">
+        <div class="Conteiner-Forte">
+            <div class="card"">
+            <div class="card-body">
+                <div class="carrossel-wrapper">
+                     <input type="radio" name="carrossel-controle" id="slide-1" checked>
+                    <input type="radio" name="carrossel-controle" id="slide-2">
+                    <input type="radio" name="carrossel-controle" id="slide-3">
+                <!-- 
+                    botões de navegação
+                     <div class="nav-botoes">
+                        <a href="../Fotos/Praia do Forte - Foto 01.jpg" class="btn-carrossel"> 1 </a>
+
+                        <a href="../Fotos/Praia do Forte - Foto 02.jpg" class="btn-carrossel"> 2 </a>
+
+                        <a href="../Fotos/Praia do Forte - Foto 04.jpg" class="btn-carrossel"> 3 </a>
+                     </div>
+                -->
+
+                     <!-- Conêiner das Imagens -->
+                      <div class="janela-carrossel">
+                        <div class="slides-lista">
+                            <img id="img1" src="{% static 'polls/Fotos/Praia do Forte - Foto 01.jpg' %}" alt="Imagem 1">
+                            <img img="img2" src="{% static 'polls/Fotos/Praia do Forte - Foto 02.jpg' %}" alt="Imagem 2">
+                            <img id="img3" src="{% static 'polls/Fotos/Praia do Forte - Foto 04.jpg' %}" alt="Imagem 3">
+                        </div>
+                      </div>
+
+                      <!-- Botões numéricos baseados nas Labels dos inputs -->
+                    <div class="nav-botoes">
+                        <label for="slide-1" class="btn-carrossel">1</label>
+                        <label for="slide-2" class="btn-carrossel">2</label>
+                        <label for="slide-3" class="btn-carrossel">3</label>
+                    </div>
+
+                <!-- Fechamento do Carrossel-wrapper -->
+                </div>
+
+                <h3 class="card-title"> A Beleza e o Charme da Praia do Forte </h3>
+                
+                <div class="Textos">
+                    <p class="card-text">
+                        <Strong> Praia do Forte </Strong>, localizada no município de Mata de São João,
+                        possui uma história diretamente ligada ao período colonial brasileiro.
+                        A ocupação da região ganhou importância a partir do século XVI,
+                        quando a família de <strong> Garcia d'Ávila </Strong>, ligada à administração colonial portuguesa,
+                        estabeleceu uma grande propriedade no litoral norte da Bahia.
+                        <br> <br>
+                        Nesse período, foi construída a Casa da Torre,
+                        posteriormente conhecida como <strong> Castelo Garcia d'Ávila </strong>.
+                        A construção servia como residência, centro administrativo
+                        e estrutura de defesa das extensas terras pertencentes à família.
+                        Ao longo dos séculos, a propriedade tornou-se uma das mais importantes da região
+                        e teve papel significativo na expansão da ocupação portuguesa pelo interior da Bahia.
+                    </p>
+                </div>
+
+                <br>
+                
+
+                <div class="title-image">
+                    <h2>Castelo Garcia d'Ávila</h2>
+                    <div class="loose-image"><img src="{% static 'polls/Fotos/Castelo_Garcia/Castelo_garcia_01.jpeg' %}"></div>
+                </div>
+
+                <br>
+
+                <h3 class="card-title">Importância Histórica </h3>
+                
+                <div class="imagem-flutuante">
+                    <div class="loose-image-flutuante"> <img src="{% static 'polls/Fotos/Castelo_Garcia/Castelo_garcia_03.jpeg' %}"> </div>
+                    <p class="card-text">A construção foi iniciada por <strong> Garcia de Sousa
+                        d'Ávila </strong>, integrante da comitiva de Tomé de Sousa,
+                        primeiro governador-geral do Brasil. Erguido no alto da Colina
+                        de <strong> Tatuapara </strong>, o complexo tinha função estratégica de vigilância
+                        da costa e proteção das embarcações que se dirigiam a <strong> Salvador </strong>.
+                        Ao longo dos séculos, tornou-se o centro de um vasto domínio
+                        territorial e exerceu grande influência na expansão colonial
+                        portuguesa pelo Nordeste. Sua história também está ligada
+                        aos processos de escravização de povos indígenas e africanos,
+                        aspecto hoje reconhecido como parte fundamental da compreensão do local.
+                        O local é uma das atrações históricas mais conhecidas
+                        da região de Praia do Forte, recebendo visitantes interessados
+                        em patrimônio, arqueologia e história do Brasil colonial.
+                    </p>
+                </div>
+
+                </div>
+
+
+
+            </div>
+            
+            </div>
+
+        <!-- Fechamento do Conteiner da Praia do Forte  -->
+        </div>
+        
+        <!-- Fechamento do Conteiner Principal  -->
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,304 @@
+body {
+    min-width: auto;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #1b577de5, #0a4105da);
+    background-repeat: no-repeat;
+    height: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Satisfy', sans-serif;
+    font-size: xx-large;
+    color: #b9c0c7;
+}
+
+h2 {
+    font-family: 'Satisfy', sans-serif;
+    font-size: x-large;
+    color: rgb(red, green, rgb(2, 2, 105));
+    align-self: center;
+    font-size: 45px;
+}
+
+h3 {
+    font-family: 'Satisfy', sans-serif;
+    font-size: 25px;
+}
+
+p {
+   font-family: 'Poppins', sans-serif;
+   text-align: justify;
+}
+
+img {
+    border-radius: 20px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.Conteiner-Principal {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 100%;
+    gap: 50px;
+}
+
+.Conteiner-Forte {
+    display: flex;
+    width: 100%;
+    align-self: center;
+}
+
+.card {
+    align-self: center;
+    width: 100%;
+}
+
+/* Esconde os inputs de rádio da tela */
+input[type="radio"] {
+  display: none;
+}
+
+.carrossel-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-image {
+    display: flex;
+    width: 100%;
+    align-self: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.title-image img {
+    height: 100%;
+    width: 100%;
+    flex-shrink: 1;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.text-image {
+    display: flex;
+    width: 100%;
+    align-self: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.Textos {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.Textos p {
+    flex: 1 1 auto;
+
+}
+
+.loose-image-flutuante img {
+    display: flex;
+    float: left;
+    max-width: 50%;
+    height: auto;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.imagem-flutuante {
+    width: 100%;
+    align-self: center;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.imagem-flutuante p {
+    width: auto;
+    max-width: 100%;
+}
+
+
+.text-image img {
+    float: right;
+}
+
+.loose-image img {
+    max-width: 500px;
+    margin-left: 20px;
+    flex-shrink: 1;
+    flex-grow: 1;
+    align-items: center;
+}
+
+/* Define o tamanho da moldura visível (sua "janela" de exibição) */
+.janela-carrossel {
+  width: 800px;         /* Ajuste para o tamanho que você quer a imagem */
+  height: 500px;
+  overflow: hidden;     /* Corta tudo o que estiver fora da janela */
+  border-radius: 8px;
+}
+
+/* Linha que segura todas as imagens lado a lado */
+.slides-lista {
+  display: flex;
+  width: 800%;          /* 100% para cada uma das 3 imagens */
+  height: 500%;
+  transition: transform 0.5s ease-in-out; /* Transição suave */
+}
+
+.slides-lista img {
+  width: 800px;         /* Deve ser exatamente o mesmo tamanho da janela */
+  height: 500px;
+  object-fit: cover;
+  justify-content: center;
+}
+
+/* O TRUQUE: Move a linha de imagens dependendo de qual botão está ativo */
+#slide-1:checked ~ .janela-carrossel .slides-lista { transform: translateX(0); }
+#slide-2:checked ~ .janela-carrossel .slides-lista { transform: translateX(-800px); }
+#slide-3:checked ~ .janela-carrossel .slides-lista { transform: translateX(-1600px); }
+
+/* Estilização dos botões numéricos */
+.nav-botoes {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+}
+
+.btn-carrossel {
+  padding: 8px 16px;
+  background-color: #ddd;
+  color: #333;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: sans-serif;
+  font-weight: bold;
+  user-select: none;
+}
+
+/* Destaca o botão numérico da imagem que está ativa no momento */
+#slide-1:checked ~ .nav-botoes [for="slide-1"],
+#slide-2:checked ~ .nav-botoes [for="slide-2"],
+#slide-3:checked ~ .nav-botoes [for="slide-3"] {
+  background-color: #1b7513;
+  color: white;
+}
+
+
+.Conteiner-Principal {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+
+
+.Conteiner-Forte {
+    display: flex;
+    width: 100%;
+}
+
+.card-text {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+.card-img-top {
+    width: 100%;
+}
+
+.card-body {
+    word-wrap: break-word;
+}
+
+
+
+@media (max-width: 900px)  {
+    .Conteiner-Principal {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .Conteiner-Forte {
+        display: flex;
+        width: 100%;
+        height: 40%;
+    }
+
+    /* Define o tamanho da moldura visível (sua "janela" de exibição) */
+    .janela-carrossel {
+    width: 400px;         /* Ajuste para o tamanho que você quer a imagem */
+    height: 250px;
+    overflow: hidden;     /* Corta tudo o que estiver fora da janela */
+    border-radius: 8px;
+    }
+
+    /* Linha que segura todas as imagens lado a lado */
+    .slides-lista {
+    display: flex;
+    width: 400%;          /* 100% para cada uma das 3 imagens */
+    height: 250%;
+    transition: transform 0.5s ease-in-out; /* Transição suave */
+    }
+
+    .slides-lista img {
+        width: 400px;         /* Deve ser exatamente o mesmo tamanho da janela */
+        height: 250px;
+        justify-content: center;
+    }
+
+    .title-image {
+        display: flex;
+        width: 100%;
+        align-self: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    .title-image img {
+        height: 100%;
+        width: 100%;
+        flex-shrink: 1;
+        border: 0px;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    /* O TRUQUE: Move a linha de imagens dependendo de qual botão está ativo */
+    #slide-1:checked ~ .janela-carrossel .slides-lista { transform: translateX(0); 
+    }
+    #slide-2:checked ~ .janela-carrossel .slides-lista { transform: translateX(-400px); 
+    }
+    #slide-3:checked ~ .janela-carrossel .slides-lista { transform: translateX(-800px); 
+    }
+
+}
+
+@media (max-width: 500px) {
+    .loose-image img {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        object-fit: cover;
+        flex-shrink: 1;
+    }
+}
